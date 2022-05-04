@@ -1,5 +1,5 @@
-Mango UI Test Project
+# Mango UI test project
 
-# Execution
+## Execution
 * `npx cypress open` opens the Cypress Test Runner (in VS terminal)
 * `npx cypress run` run browserless tests (in VS terminal)

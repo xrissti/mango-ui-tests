@@ -18,19 +18,3 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-
-afterEach(() => {
-	let str = [];
-	cy.getCookies().then((cookies) => {
-		cy.log(cookies);
-		for (let l = 0; l < cookies.length; l++) {
-			if (cookies.length > 0 && l == 0) {
-				str[l] = cookies[l].name;
-				Cypress.Cookies.preserveOnce(str[l]);
-			} else if (cookies.length > 1 && l > 1) {
-				str[l] = cookies[l].name;
-				Cypress.Cookies.preserveOnce(str[l]);
-			}
-		}
-	});
-});
