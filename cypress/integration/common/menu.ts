@@ -18,3 +18,13 @@ When('the user hovers {string} and clicks {string} -> {string} option', (menuTex
 When('the user clicks {string} option of the bottom menu', (menuText) => {
   cy.get('.vsv-link > span').should('contain', menuText).contains(menuText).click();
 });
+
+When('the user clicks "Choose your size" drop-down button', () => {
+  cy.get('#sizeSelector').click();
+});
+
+When('the user selects the {string} menu option', (menuText) => {
+  cy.get('#sizeSelector').click().then(() => {
+    cy.get(`[data-size="${menuText}"]`).click({multiple: true});
+  })
+});

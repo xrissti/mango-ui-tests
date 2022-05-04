@@ -1,7 +1,7 @@
   {
     "viewportWidth": 1280,
     "viewportHeight": 1024,
-    "baseUrl": "https://shop.mango.com/",
+    "baseUrl": "https://shop.mango.com",
     "testFiles": "**/features/*.{feature,features,ts}",
     "env": {
       "TAGS": "@automated"

@@ -1,11 +1,9 @@
 Feature: Main page
 
 @automated
-@clearCookies
 Scenario: Navigate to "Main" page
     Given the user navigates to the "Main" page
-    When the user clicks the "Accept all" button
-    And the user clicks the "English" link
+#    When the user clicks the "Accept all" button
     Then the "Main" page should be displayed
 
 @automated
@@ -18,7 +16,7 @@ Scenario: The user can see Clothing menu on hover
 Scenario: Women shirt page via top Women menu
     Given the user navigates to the "Main" page
     When the user hovers "Women" and clicks "Clothing" -> "Shirts" option
-    Then the "Women shirts" page should be displayed
+    Then the "Womens shirts" page should be displayed
 
 @automated
 Scenario: Women shirt page via bottom Women menu
@@ -26,4 +24,4 @@ Scenario: Women shirt page via bottom Women menu
     And the user clicks the "Women" button
     When the user scrolls to the "Women" bottom menu 
     And the user clicks "Shirts" option of the bottom menu
-    Then the "Women shirts" page should be displayed
+    Then the "Womens shirts" page should be displayed

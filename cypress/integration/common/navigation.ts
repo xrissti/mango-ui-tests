@@ -2,7 +2,9 @@ import { Given, Then } from 'cypress-cucumber-preprocessor/steps';
 import { PAGES } from './constants';
 
 Given('the user navigates to the {string} page', (pageName: string) => {
-	cy.visit(PAGES[pageName].url);
+  cy.visit(PAGES[pageName].url).then(() => {
+    cy.get('button', { timeout: 60000 }).should('contain', 'Accept all').contains('Accept all').click();
+  });
 });
 
 Then('the {string} page should be displayed', (pageName) => {
